@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <h1>Bấm nút để tăng giá trị</h1>
+        <button v-on:click="upValue">Ấn vào đây</button>
+        <p>Giá trị: {{ dem }}</p>
+        <p>Tỏa độ chuột: {{x}}/{{y}}</p>
+        <div  v-on:mousemove="radiant" style=" height: 400px; background-color: #ccc">
+            <!-- Cách 1 để dừng sự kiện mousemove -->
+            <div v-on:mousemove="stopEvent" style=" height: 50px; background-color: rgb(235, 54, 54)"></div>
+            <div style=" height: 300px; background-color: #ccc"></div>
+            <!-- Cách 2 để dừng sự kiện mousemove-->
+            <div v-on:mousemove.stop style=" height: 50px; background-color: rgb(235, 54, 54)"></div>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

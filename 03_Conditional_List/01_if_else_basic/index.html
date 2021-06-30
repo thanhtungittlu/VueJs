@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <p>How are you?</p>
+        <!-- Khi sai thì xóa luôn cả element, và xóa cả những phần tử con trong element đó -->
+        <p v-if ='flag'>Yes, I am</p>  
+        <p v-else ='flag'>No, I tired</p>
+        <button @click= 'flag = !flag'>Change</button>
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

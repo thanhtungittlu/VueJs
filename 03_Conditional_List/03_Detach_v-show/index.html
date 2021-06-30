@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <p>How are you?</p>
+        <!-- v-show Khi sai thì thêm thuộc tính ẩn (display: none) cho element -->
+        <p v-show ='flag'>Yes, I am</p>  
+        <p v-show ='!flag'>No, I tired</p>
+        <button @click= 'flag = !flag'>Change</button>
+        <!-- Vì thẻ teamplate không phải là thẻ của html mà là graph của Vue nên không thể dùng v-show cho teamplate -->
+        <template v-if="flag"> 
+            <div>Menu1</div>
+            <div>Menu2</div>
+            <div>Menu3</div>
+            <div>Menu4</div>
+            <div>Menu5</div>
+        </template> 
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

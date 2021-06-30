@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <p>{{ showA }}</p>
+        <p>{{ showB }}</p>
+        <button v-on:click="a++">Tăng a</button>
+        <button v-on:click="b++">Tăng b</button>
+
+        <p>{{ showAf() }}</p>
+        <p>{{ showBf() }}</p>
+        <button v-on:click="af++">Tăng a</button>
+        <button v-on:click="bf++">Tăng b</button>
+
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

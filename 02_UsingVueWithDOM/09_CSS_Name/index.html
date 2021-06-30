@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+    <style>
+        #obj{
+            display: flex;
+            flex-direction: row;
+        }
+        .square {
+            width:100px;
+            height: 100px;
+            margin-left: 20px;
+            background-color:gray;
+        }
+        .red_property {
+            background-color: red;
+        }
+        .blue_property{
+            background-color: blue;
+        }
+        .green_property {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="obj">
+        <div class="square" @click ="red = ! red" :class="{red_property: red}"> </div>
+        <div class="square" :class="{red_property: red}"> </div>
+        <div class="square" :class="color"> </div>
+        <input type="text" v-model="color">
+    </div>
+    
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

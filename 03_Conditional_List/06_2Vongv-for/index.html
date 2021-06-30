@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <ul>
+            <li v-for='(menu, i) in menus' >{{menu}} có index {{i}}</li>
+        </ul>
+        <hr>
+        <ul>
+            <li v-for='student in students' >{{student.age}}</li>
+        </ul>
+        <hr>
+        <ul>
+            <li v-for='student in students' >
+                <div v-for='(value,key,index) in student'>{{key}}: {{value}} ({{index}})</div>
+            </li>
+        </ul>
+        
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

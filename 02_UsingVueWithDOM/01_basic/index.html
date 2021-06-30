@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        
+        <!-- v-once: giữ lại nội dung cũ 1 lần, rồi mới cập nhật lại nội dung -->
+        <p v-once>{{ noidung }} - {{ changeNoiDung() }}</p> 
+        <p >{{ noidung }} </p> 
+
+
+        <!-- khi làm việc với các attribute thì phải dùng v-bind -->
+        <a v-bind:href="link">MyFacebook</a> 
+
+
+        <!-- Khi muons viết 1 đoạn mã html thì dùng v-html -->
+
+        <p v-html="codeHTML"></p>
+
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

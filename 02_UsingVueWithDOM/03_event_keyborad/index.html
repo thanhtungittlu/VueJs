@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <!-- <input type="text" v-on:keyup.enter.space.right="keyBoardE" > Cách 1 -->
+        <input type="text" @keyup.enter.space.right="keyBoardE" > <!-- short hand -->
+        
+        <!-- .enter
+        .tab
+        .delete (captures both “Delete” and “Backspace” keys)
+        .esc
+        .space
+        .up
+        .down
+        .left
+        .right -->
+
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

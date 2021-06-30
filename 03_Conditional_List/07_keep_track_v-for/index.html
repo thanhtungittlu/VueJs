@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="/vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <!-- Khi duyệt qua mảng menus thì Vue js sẽ sinh ra 5 cái mã unique key assign và các index 
+             unique key    indenx
+             001nfkasjfn      0
+             00ưerkasjfgg     1
+             A01nfkưerw       2
+             B01newrwerfk     3
+             .....          .... 
+            khi thêm phần tử vào thì sẽ không load lại mảng mà thêm vào luôn
+        -->
+        <ul>
+            <li v-for='(menu, i) in menus' :key='i'>{{menu}} có index {{i}}</li>
+        </ul>
+        <button @click ='menus.push("Ngôn ngữ khác")'>Click add Item</button>
+
+    </div>
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>
